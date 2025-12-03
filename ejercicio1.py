@@ -1,0 +1,12 @@
+salario_base = float(input("Ingrese su salario: "))
+horas_extra = float(input("Ingrese las horas extra que hizo: "))
+pago_hora_extra = float(input("Ingrese el pago por hora extra: "))
+bono = float(input("Ingrese el bono dado: "))
+afp = int(input("Ingrese el {%} del afp: "))
+salud = int(input("Ingrese el {%} de la salud: "))
+salario_neto = salario_base + (horas_extra * pago_hora_extra) + bono - (salario_base * afp / 100) - (salario_base * salud / 100)
+salario_bruto = salario_base + (horas_extra * pago_hora_extra) + bono
+descuentos = (salario_base * afp / 100) + (salario_base * salud / 100)
+print("El saladio neto es: ", salario_neto)
+print("El salario bruto es: ", salario_bruto)
+print("Los descuentos son en total: ", descuentos)
